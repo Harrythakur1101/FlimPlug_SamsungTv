@@ -1,0 +1,81 @@
+.btn-default {
+	background-color: transparent; ! important;
+	color: white;
+	border-color: #808080; ! important;
+	!
+	important
+	
+}
+.btn-style:hover, btn-style:focus {
+	color: white;
+	background-color: #30434b;
+	padding:17px;
+	
+	
+}
+.btn-default:hover {
+	background-color: #0cb9f2; ! important;
+	border-color: #0cb9f2; ! important;
+	color: white;
+	
+}
+
+.btn-default:click {
+	background-color: #0cb9f2; ! important;
+	border-color: #0cb9f2; ! important;
+	color: white;
+	
+}
+.btn-default:focus {
+	background-color: #0cb9f2; ! important;
+	border-color: #0cb9f2; ! important;
+	color: white;
+	
+}
+.btn-hover:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn:focus, .btn:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+/* add the height width  as per requirement
+@author Subhashree*/
+.btn-style {
+	    padding: 5px 30px;
+    min-width: 400px;
+    height: 150px;
+    max-width: 450px;
+    border-radius: 10px;
+    color: white;
+    margin: 0 15px;
+    overflow: hidden;
+    border: 3px solid grey;
+    background: transparent;
+    text-overflow: ellipsis;
+	
+}
+.btn-focus {
+  background-color:  #0cb9f2;
+  border-color: #0cb9f2;
+  color: white;
+}
+
+.button-color {
+	background-color: transparent; ! important;
+	color: white;
+	border-color: #808080; ! important;
+	
+}
+
+/* add the background image as per requirement
+@author Subhashree*/
+body {
+	background-color: #1D2A30;
+	background-image: url("../images/background.png");
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+}

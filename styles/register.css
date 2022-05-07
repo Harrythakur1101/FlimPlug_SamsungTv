@@ -1,0 +1,380 @@
+
+.btn-default {
+	background-color: #0cb9f2; ! important;
+	color: white;
+}
+
+.btn-default:hover {
+	background-color: #0cb9f2; ! important;
+	color: white;
+}
+
+.btn-default:click {
+	background-color: #0cb9f2; ! important;
+	color: white;
+}
+.btn:focus, .btn:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+.btn-hover:hover {
+    color: #ffffff;
+    text-decoration: none;
+    border-color: #808080;
+}
+
+.vertical-line {
+	border-left: 2px solid white;
+	height: 700px;
+	opacity: 0.10;
+}
+/* add the background image as per requirement
+@author Lisa*/
+body {
+	background-color: #1D2A30;
+	background-size: cover;
+	background-image: url("../images/background.png");
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+/*  add the margin top and  border-radius
+@author lisa*/
+.btn-style {
+	padding: 10px;
+	color: white;
+    margin-top:10px;
+	border-radius: 10px;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: #808080;
+	width:100%;
+	height:95px;;
+	
+}
+
+.btn-style:hover, btn-style:focus {
+	color: white;
+	background-color: #808080;
+	padding:10px;
+	
+	
+}
+
+.inputtext-style {
+	padding: 10px;
+	border-radius: 15px;
+	background: rgba(83,91,94,0.5);
+	margin-bottom: 30px;
+	height: 90px;
+}
+
+
+.button-color {
+	background-color: #30434b ;
+}
+
+.forgot-style {
+	color: white;
+	size: 5;
+}
+
+.group {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.group input {
+	font-size: 12px;
+	padding: 30px 30px 30px 30px;
+	display: block;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #757575;
+}
+
+.group input:focus {
+	outline: none;
+}
+/*for text style
+@author Lisa  */
+.plan text{
+font-size: 30px;
+ margin-top:10px;
+  color: white;
+  opacity:0.25;
+}
+
+/* LABEL ======================================= */
+.group label {
+	color: #fff;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.group input:focus ~ label, input:valid ~ label {
+	top: -15px;
+	font-size: 14px;
+	color: #5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.group .bar {
+	position: relative;
+	display: block;
+	width: 555px;
+}
+
+.group .bar:before, .bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #5264AE;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.group .bar:before {
+	left: 50%;
+}
+
+.group .bar:after {
+	right: 50%;
+}
+
+/* active state */
+.group input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.group .highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+/* active state */
+.group input:focus ~ .highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	-moz-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@
+-webkit-keyframes inputHighlighter {from { background:#5264AE;
+	
+}
+
+to {
+	width: 0;
+	background: transparent;
+}
+
+}
+@
+-moz-keyframes inputHighlighter {from { background:#5264AE;
+	
+}
+
+to {
+	width: 0;
+	background: transparent;
+}
+
+}
+@
+keyframes inputHighlighter {from { background:#5264AE;
+	
+}
+
+to {
+	width: 0;
+	background: transparent;
+}
+
+}
+.hr-sect {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: white;
+	margin: 8px 0px;
+}
+
+.hr-sect::before, .hr-sect::after {
+	content: "";
+	flex-grow: 1;
+	background: white;
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 8px;
+}
+
+.input-icon {
+	position: absolute;
+	left: 3px;
+	top: calc(50% - 0.5em);
+	/* Keep icon in center of input, regardless of the input height */
+}
+
+input {
+	padding-left: 17px;
+}
+
+.input-wrapper {
+	position: relative;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+	position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+	position: absolute;
+	padding: 10px;
+	margin-top: 23px;
+	margin-right: 90px;
+	margin-left: 30px;
+	pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon {
+	left: 0px;
+}
+
+.right-addon .glyphicon {
+	right: 0px;
+}
+
+/* add padding  */
+.left-addon input {
+	padding-left: 30px;
+}
+
+.right-addon input {
+	padding-right: 30px;
+}
+
+.glyphicon {
+	font-size: 30px;
+}
+
+.loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #0cb9f2;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 10;
+}
+
+.text-color{
+
+color:#fff;
+opacity:0.6;
+font-size: 30px;
+margin-top: 10px
+}
+.toast {
+   
+      position: absolute;
+    left: 35%;
+    top: 80%;
+    margin-left: -200px;
+    /* bottom: 100px; */
+    /* margin-top: 50%; */
+    bottom: 150px;
+    /* background-color: black; */
+    color: white;
+    font-family: Calibri;
+    font-size: 45px;
+    z-index: 4;
+    padding: 10px;
+    height: 150px;
+    width: 1000px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+/* Safari */
+@
+-webkit-keyframes spin { 0% {
+	-webkit-transform: rotate(0deg);
+}
+
+100%
+{
+-webkit-transform
+
+
+:
+
+ 
+
+rotate
+
+
+(360
+deg
+);
+
+ 
+
+}
+}
+@
+keyframes spin { 0% {
+	transform: rotate(0deg);
+}
+100%
+{
+transform
+
+
+:
+
+ 
+
+rotate
+
+
+(360
+deg
+);
+
+ 
+
+}
+}

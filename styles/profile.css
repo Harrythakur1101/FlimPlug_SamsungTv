@@ -1,0 +1,524 @@
+  
+   /*  add for my subscription
+   @author Lisa*/
+   
+   .rectangle {
+  height: 350px;
+  width:  1350px;
+  background-color: #27363d;
+  border-radius: 5px;
+  margin-left:20px;
+  text-color:white;
+  margin-top:210px;
+}
+.btn-default {
+	background-color: #30434b; ! important;
+	color: white;
+	!
+	important
+}
+.btn:focus, .btn:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+
+
+.vertical {
+	border-left: 2px solid white;
+	height: 40px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.btn-default:hover {
+	background-color: #0cb9f2;
+	!
+	important;
+}
+
+.btn-default:click {
+	background-color: #0cb9f2;
+	!
+	important;
+}
+.btn-default:focus{
+	color: #ffffff;
+    background-color: #0cb9f2;
+    border-color: #0cb9f2;
+}
+.btn-lanuage{
+	padding: 17px;
+	color: white;
+    margin-top:60px;
+	border-radius: 10px;
+	font-weight: bold;
+	background-color: #0cb9f2;
+	width:50%;
+	    height: 100px;
+	border-color: #0cb9f2;
+}
+
+.btn-lanuage:hover, btn-lanuage:focus {
+	
+	background-color: #0cb9f2;
+	padding:17px;
+	
+	
+}
+
+.vertical-line {
+	border-left: 2px solid white;
+	height: 600px;
+	margin-top: 30px;
+	opacity: 0.10;
+}
+
+/* add the background image as per requirement
+@author Lisa*/
+body {
+	background-image: url("../images/background.png");
+    background-color: #1D2A30;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.text-color {
+	color: white;
+}
+.btn-hover:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-style {
+	padding: 10px;
+	color: white;
+    margin-top:10px;
+	border-radius: 10px;
+	font-weight: bold;
+	border: 3px solid grey;
+    background: transparent;
+	width:100%;
+	
+}
+/*add for profile button style*/
+.btn-style-2 {
+	padding: 17px;
+	border-radius: 0px;
+	/*  display: table-cell; */
+	color: white;
+	background-color: transparent; ! important;
+	border: 3px solid grey;
+	/* text-align: center; */
+	 display: inline-block;
+	vertical-align: middle; 
+	font-size: 26px;
+}
+
+.inputtext-style {
+	padding: 10px;
+	border-radius: 15px;
+	    background: rgba(83,91,94,0.5);
+ height: 90px;
+	
+	
+}
+
+.button-color {
+	background-color: transparent;
+	color: white;
+	border-color: #808080;
+}
+.button-color._hovered {
+	background-color: #0cb9f2;
+	border-color: #0cb9f2;
+	border: 3px solid #0cb9f2;
+}
+
+.forgot-style {
+	color: white;
+	
+}
+
+.group {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.group input {
+	font-size: 12px;
+	padding: 30px 30px 30px 30px;
+	display: block;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #757575;
+}
+
+.group input:focus {
+	outline: none;
+}
+
+/* LABEL ======================================= */
+.group label {
+	color: #fff;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.group input:focus ~ label, input:valid ~ label {
+	top: -15px;
+	font-size: 14px;
+	color: #5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.group .bar {
+	position: relative;
+	display: block;
+	width: 555px;
+}
+
+.group .bar:before, .bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #5264AE;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.group .bar:before {
+	left: 50%;
+}
+
+.group .bar:after {
+	right: 50%;
+}
+
+/* active state */
+.group input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.group .highlight {
+	position: absolute;
+	height: 50%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+/* active state */
+.group input:focus ~ .highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	-moz-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@
+-webkit-keyframes inputHighlighter {from { background:#5264AE;
+	
+}
+
+to {
+	width: 0;
+	background: transparent;
+}
+
+}
+@
+-moz-keyframes inputHighlighter {from { background:#5264AE;
+	
+}
+
+to {
+	width: 0;
+	background: transparent;
+}
+
+}
+@
+keyframes inputHighlighter {from { background:#5264AE;
+	
+}
+
+to {
+	width: 0;
+	background: transparent;
+}
+
+}
+.hr-sect {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: white;
+	margin: 8px 0px;
+}
+
+.vertical_line  {
+    border-style: solid;
+    border-bottom: thick line #fffff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 220px;
+    margin-right:3px;
+}
+.hr-sect::before, .hr-sect::after {
+	content: "";
+	flex-grow: 1;
+	background: white;
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 8px;
+}
+
+@import
+	url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+	;
+
+
+.search {
+	position: relative;
+	color: #eeeeee;
+	font-size: 25px;
+}
+
+.input_style {
+	background-color: white;
+	border: solid 1px #6E6E6E;
+	height: 30px;
+	color: black;
+	font-size: 30px;
+	vertical-align: 9px " size=" 35"
+}
+/* enable absolute positioning */
+.inner-addon {
+	position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+	position: absolute;
+	padding: 10px;
+	margin-top: 90px;
+	margin-right: 90px;
+	margin-left: 30px;
+	pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon {
+	left: 0px;
+}
+
+.right-addon .glyphicon {
+	right: 0px;
+}
+
+/* add padding  */
+.left-addon input {
+	padding-left: 30px;
+}
+
+.right-addon input {
+	padding-right: 30px;
+}
+
+.glyphicon {
+	font-size: 30px;
+}
+
+.form-actions {
+	margin: 0;
+	marginLeft: 20;
+	background-color: transparent;
+	text-align: center;
+	background-color: transparent;
+}
+
+.loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #0cb9f2;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 10;
+}
+
+/* Safari */
+@
+-webkit-keyframes spin { 0% {
+	-webkit-transform: rotate(0deg);
+}
+
+100%
+{
+-webkit-transform
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+rotate
+
+
+
+
+
+
+
+
+
+
+
+
+(360
+deg
+
+
+
+
+
+
+
+
+
+
+);
+}
+}
+@
+keyframes spin { 0% {
+	transform: rotate(0deg);
+}
+
+100%
+{
+transform
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+rotate
+
+
+
+
+
+
+
+
+
+
+
+
+(360
+deg
+
+
+
+
+
+
+
+
+
+
+);
+}
+}
+.toast {
+	 position: absolute;
+    left: 35%;
+    top: 80%;
+    margin-left: -200px;
+    /* bottom: 100px; */
+    /* margin-top: 50%; */
+    bottom: 150px;
+    /* background-color: black; */
+    color: white;
+    font-family: Calibri;
+    font-size: 45px;
+    z-index: 4;
+    padding: 10px;
+    height: 150px;
+    width: 1000px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+input::placeholder {
+	color: white;
+}

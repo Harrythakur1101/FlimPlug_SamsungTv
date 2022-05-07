@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avplayer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"  rel="stylesheet">
+    <script data-consolejs-channel="eb4ffcc9-50ba-fc0c-6071-6fb8470f07c5" src="https://remotejs.com/agent/agent.js"></script>
+    <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+  
+    <style>
+        
+      .progress-bar {
+        height: 10px;
+        width: 90%;
+        margin: auto;
+        position: absolute;
+        bottom: 8vh;
+        border-radius: 5px;
+        left: 5%;
+        background: grey;
+        overflow: hidden;
+      }
+      .progress {
+        height: 100%;
+        width: 0%;
+        background: #ffc50f;
+      }
+      .material-icons{
+         color:#ffc50f;
+         size: 200px;
+      }
+      .menu_left{
+        position: relative;
+        top:500px;
+        left:300px;
+        display: none;
+      }
+      .menu_right{
+        position: relative;
+        top:500px;
+        right:-1500px;
+       display: none;
+      }
+      /* .display{
+        display: block;
+      } */
+      .menu_middle{
+        position: relative;
+        top:500px;
+        right:-900px;
+        display: none;
+      }
+      .menu_middle_pause{
+        position: fixed; /* or absolute */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        /* justify-items: center; */
+        display: none;
+      }
+       .progress-area .progress-bar
+        {   
+            position: relative;
+            width: 50%;
+            background: rgb(255, 174, 0);
+            height: inherit;
+            border-radius: inherit;
+            cursor: pointer;
+        }
+        #hello{
+          color: white;
+        }
+        #timing{
+          color: white;
+        }
+        .replay,.pause,.forward{
+          font-size: 100px;
+        }
+      #timingTT{
+        color: white;
+      }
+      #status{
+        color: white;
+      }
+      #spinner{
+        position: fixed; /* or absolute */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+</head>
+<body>
+    <!-- <object type="application/avplayer"></object> -->
+    <!-- <div >
+      <h2 id="hello"> </h2> 
+      <h2 id="timing"></h2>
+      <h2 id="timingTT">hello</h2>
+      <h2 id="status">adPlayed</h2>
+    </div> -->
+    <div class="menu">
+        <span class="menu_left">
+        <i class="material-icons replay ">
+          replay_10
+        </i>
+        </span>
+        <span class="menu_middle">
+            <i class="material-icons play">
+                play_arrow
+            </i>
+        </span>
+        <span class="menu_middle_pause">
+            <i class="material-icons pause">
+                pause
+            </i>
+        </span>
+        <span class="loader-blue" id="spinner" style="display:none"><img src="images/Preloader.gif" alt="loading" /></span>
+        <span class="menu_right ">
+            <i class="material-icons forward ">
+               
+                forward_30
+            </i>
+        </span>
+        
+    </div>
+   
+    <div class="progress-bar" id="bar" style="display: inherit;">
+        <div class="progress"></div>
+      </div>
+
+
+      <!-- script Coding -->
+      <script src="js/Avplayer.js"></script>
+      <script>
+ 
+ 
+ 
+  
+ 
+      document.addEventListener('keydown',function(e){
+          switch(e.keyCode){
+        //     case 13: //OK button 
+        // //  webapis.avplay.pause();
+        //  $(document).ready(function(){
+           
+        //    if( isPlaying==true){
+        //     webapis.avplay.pause();
+        //     $('#bar').css('display','inline-block');
+        //     $('.menu_middle_pause').css('display','inline-block');
+        //     isPlaying=false;
+        //     $('#hello').text(isPlaying)
+        //    }else{
+        //     webapis.avplay.play();
+        //     isPlaying=true;
+        //     $('.menu_middle_pause').css('display','none');
+        //     setTimeout (function(){
+        //     $('#bar').css('display','none');
+        //     }, 4000)
+        //     $('#hello').text(isPlaying)
+        //    }
+        //  })
+        // // console.log("Enter Key Press")
+        // break;
+    
+        // case 415: //Media PLAY button
+        // webapis.avplay.play();
+        // break;
+      
+     }
+     
+ }) 
+ 
+      </script>
+
+
+</body>
+</html>

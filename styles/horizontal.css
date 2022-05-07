@@ -1,0 +1,188 @@
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+     background-image: url("../images/languagescreen.png");
+     background-size:cover;
+}
+
+ html {
+    background: #1B262C;
+    height: 100%;
+} 
+
+#wrapper-sliderTv {
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    width: 1700px;
+    height: 545px;
+    overflow: hidden;
+}
+
+#sliderTV {
+    position: absolute;
+    top: 50px;
+    
+    width: 1900px;
+    height: 500px;
+}
+
+.sliderTV__item {
+    width: 370px;
+    height: inherit;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+    .sliderTV__item img {
+        width: 330px;
+        height: 350px;
+        cursor: pointer;
+    }
+
+    .sliderTV__item h1 {
+	    position: absolute;
+	    left:0;
+	    top:40%;
+	    right:0;
+	    line-height:30px;
+	    margin-top:-15px;
+	    overflow:hidden;
+	    text-overflow: ellipsis;
+        font-size: 40px;
+        text-align: center;
+        color: whitesmoke;
+        text-shadow: 1px 1px 2px rgba(20, 20, 20, 1);
+    }
+
+.sliderTV--focus img {
+    border: 5px #01a6e1 solid;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-box-shadow: 2px 2px 40px -8px rgba(255,255,255,0.6);
+    -moz-box-shadow: 2px 2px 40px -8px rgba(255,255,255,0.6);
+    box-shadow: 2px 2px 40px -8px rgba(255,255,255,0.6);
+}
+
+.movie img {
+    width: 280px;
+}
+
+
+.sliderTV__prev,
+.sliderTV__next {
+    font-size: 120px;
+    color: rgb(128, 128, 128);
+    cursor: pointer;
+}
+
+.sliderTV__prev {
+    position: absolute;
+    top: 110px;
+    left: -100px;
+    width: 50px;
+}
+
+.sliderTV__next {
+    position: absolute;
+    top: 110px;
+    left: 1450px;
+    width: 50px;
+}
+
+#sliderTV__mask-left {
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    width: 100px;
+    height: 550px;
+    background: -moz-linear-gradient(left, rgba(30, 30, 30, 1) 0%, rgba(30, 30, 30, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(30, 30, 30, 1) 0%, rgba(30, 30, 30, 0) 100%);
+    background: linear-gradient(to right, rgba(30, 30, 30, 1) 0%, rgba(30, 30, 30, 0) 100%);
+}
+
+#sliderTV__mask-right {
+    position: absolute;
+    top: -50px;
+    background: -moz-linear-gradient(left, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 1) 100%);
+    background: linear-gradient(to right, rgba(30, 30, 30, 0) 0%, rgba(30, 30, 30, 1) 100%);
+    left: 1500px;
+    width: 100px;
+    height: 550px;
+}
+
+#help {
+    position: fixed;
+    right: 40px;
+    top: 200px;
+    width: 250px;
+    background-color: #3B3B3B;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    color: #8A8A8A;
+    -webkit-box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.75);
+    -moz-animation: fadeOut 1s ease-in 15s forwards;
+    -webkit-animation: fadeOut 1s ease-in 15s forwards;
+    -o-animation: fadeOut 1s ease-in 15s forwards;
+    animation: fadeOut 1s ease-in 15s forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+#help__input {
+    opacity: 0.6;
+}

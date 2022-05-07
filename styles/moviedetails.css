@@ -1,0 +1,140 @@
+
+
+
+.text-color {
+	color: white;
+}
+
+.vertical{
+    border-left: 2px solid white;
+	height: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+hr {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 8px auto;
+	height: 0;
+	width: 70%;
+	margin-left: -0px;
+	max-height: 0;
+	font-size: 1px;
+	line-height: 0;
+	clear: both;
+	border: none;
+	border-top: 1px solid #aaaaaa;
+	border-bottom: 1px solid #ffffff;
+	opacity: 0.2;
+}
+
+.color-overlay {
+	position: absolute;
+	background-size: cover;
+	background-image: url("../images/topoverlay.png");
+}
+
+.loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #0cb9f2;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 10;
+}
+
+/* Safari */
+@
+-webkit-keyframes spin { 0% {
+	-webkit-transform: rotate(0deg);
+}
+
+100%
+{
+-webkit-transform
+:
+ 
+rotate
+(360deg);
+ 
+}
+}
+@
+keyframes spin { 0% {
+	transform: rotate(0deg);
+}
+
+100%
+{
+transform
+:
+ 
+rotate
+(360deg);
+ 
+}
+}
+.vertical-line {
+	border-left: 2px solid white;
+	height: 40px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.toast {
+	/* width: 300px;
+	height: 20px;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	bottom: 100px;
+	margin-top: 50%;
+	bottom: 150px;
+	 background-color: black;
+	color: white;
+	font-family: Calibri;
+	font-size: 35px;
+	z-index: 4;
+	padding: 10px;
+	height: 100px;
+	width: 500px;
+	text-align: center;
+	border-radius: 2px;
+	-webkit-box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+	-moz-box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+	box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1); */
+	
+	 position: absolute;
+    left: 35%;
+    top: 80%;
+    margin-left: -200px;
+    /* bottom: 100px; */
+    /* margin-top: 50%; */
+    bottom: 150px;
+    /* background-color: black; */
+    color: white;
+    font-family: Calibri;
+    font-size: 45px;
+    z-index: 4;
+    padding: 10px;
+    height: 150px;
+    width: 1000px;
+    text-align: center;
+    border-radius: 2px;
+	
+}
+
+.detail-modal {
+	max-width: 1580px;
+}

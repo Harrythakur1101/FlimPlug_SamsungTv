@@ -1,0 +1,384 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Bootstrap contributors">
+	<meta name="generator" content="Jekyll v3.8.5">
+
+
+	<title></title>
+
+	<!-- Bootstrap CSS -->
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<!-- Custom styles for this template -->
+	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/default.css" />
+	<script src="webOSTVjs-1.2.4/webOSTV.js" charset="utf-8"></script>
+	<script src="webOSTVjs-1.2.4/webOSTV-dev.js" charset="utf-8"></script>
+	<script type="text/javascript">
+
+		window.addEventListener("keydown", function(e) {
+			console.log("[keyCode] : " + "[" + e.keyCode + "]");
+	
+			switch (e.keyCode) {
+				case 461:
+					console.log("Back key pressed");
+					webOS.platformBack();
+	
+					break;
+			}
+		});
+	
+	</script>
+	<style type="text/css">
+		
+		.rowsec {
+			float: left;
+			width: 100%;
+		}
+
+	</style>
+
+	<script src="js/home.js"></script>
+
+
+	<style>
+		body::-webkit-scrollbar {
+			width: 0 !important
+		}
+
+		.sectionname {
+			position: relative;
+		}
+
+		.a {
+			width: 200px;
+			float: left;
+			margin: 0px 11px 11px 0px;
+		}
+
+		.abc div {
+			/* padding: 50px; */
+			transition: transform .2s;
+			/* Animation */
+
+		}
+
+		/* test {
+
+			"backgroundImage": {
+				"src": "/images/logo.jpg"
+			}
+		} */
+
+		.abc div.active {
+			transform: scale(1.2);
+			margin-top: -3px;
+		}
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+
+		.hdr {
+			color: #fff;
+		}
+
+		.border-inside {
+			border: none !important;
+			border-radius: 0px;
+		}
+
+		.card {
+			background-color: #1b262b;
+			margin-left: 25px;
+		}
+
+		.innerContainer {
+			width: 100%;
+			/* background-color: white; */
+			/* height: 299px; */
+			overflow: scroll;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			display: inline-flex;
+			padding-left: 0;
+			margin-left: -24px;
+		}
+
+		.active {
+			color: #0cb9f2;
+			border: 3px solid red !important;
+		}
+
+		.nav-item.active {
+			border: none;
+		}
+
+		.navbar-nav .active>.nav-link {
+			color: #0cb9f2 !important;
+		}
+
+
+		.subcat {
+			padding: 0 !important;
+		}
+
+		.border-inside {
+			border: 3px solid #4b4b4b;
+			border-radius: 0px;
+		}
+
+
+		.right-scroll {
+			top: 3%;
+			background: #1b262b;
+			left: 27%;
+		}
+
+		.left-menu {
+			background-color: #000000;
+			/* z-index: 9999; */
+			width: 100%;
+			height: 100vh;
+			padding-top: 93px;
+		}
+
+		.left-menu p {
+			font-size: 40px;
+			padding-left: 95px;
+		}
+
+		.imgsec {
+			width: 150px;
+			height: 225px;
+			background-color: #EA2E0F;
+		}
+
+		.left-menu p span {
+			padding-left: 21px;
+		}
+
+		.temp-right {
+			left: 09% !important;
+			background: #1b262b;
+		}
+
+		.left-menu p.active {
+			background: #8B0000;
+			color: white;
+		}
+		.right-padding {
+			left: 0% !important;
+		}
+
+		/* .hmpageimg img {
+    width: 350px;
+    height: auto;
+     
+} */
+		.card a {
+			background: #1b262b;
+			border: 3px solid #656667;
+			/*         margin-left: 20px; */
+		}
+
+		#innerContainer .card>.active {
+			border: 3px solid #0cb9f2;
+		}
+
+		p.delete {
+			border: 2px solid #000;
+		}
+
+		p.delete:hover {
+			border: 2px solid red !important;
+		}
+
+		#content_row {
+			height: 488px;
+			overflow-y: auto;
+		}
+
+		#content_row::-webkit-scrollbar {
+			display: none;
+		}
+
+		.notification,
+		.logout {
+			position: absolute;
+			width: 46rem;
+			height: 20rem;
+			left: 32%;
+			top: 32%;
+			padding: 2rem;
+			border-radius: 13px;
+			z-index: 9999;
+			box-shadow: 0px 0px 18px 2px #5f5f5f;
+			background-color: #2f2e2e;
+		}
+
+		.notify-title {
+			font-size: 2.8rem;
+			font-weight: 600;
+			border-bottom: 2px solid #16ddf81a;
+			margin-bottom: 1rem;
+		}
+
+		.notify-desc,
+		.logoutDesc {
+			font-size: 1.8rem;
+			font-weight: 400;
+			color: #b3b3b3;
+			margin-bottom: 1.8rem;
+		}
+
+		.cus-btn {
+			padding: 8px 59px;
+			font-size: 20px;
+			background: #575a5a;
+			color: #fff;
+		}
+
+		.cus-btn.active {
+			background: red;
+			border: 1px solid red;
+			border-radius: 0.25rem;
+			font-weight: 600;
+		}
+		.home-top{
+			top: 45vh !important;
+		}
+
+		/* .left-menu{
+			/* z-index: 100000000 !; */
+
+		/* }  */
+		.iconNavigation{
+			position: absolute;
+			z-index: 555555;
+			width: 50px;
+			height: 50px;
+			top: 50vh;
+			transform: translate(0,-50%);
+			background: rgba(185, 185, 185, 0.39);
+			border-radius: 50px;
+			padding: 2px;
+			opacity: 0;
+		}
+		.iconNavigation:hover{
+			background: rgba(185, 185, 185, 0.6);
+
+		}
+		.leftIcon{
+			left: 10%;
+
+		}
+		.rightIcon{
+			right: 05%;
+
+		}
+		.logout{
+			display: none;
+		}
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a class="navbar-brand" href="#"><img
+					src="images/50_1.png" style="width:auto;height:50px;" /></a>
+		</nav>
+	</header>
+
+	<div class="leftIcon iconNavigation">
+		<img src="./images/icons/leftIcon.svg" alt="">
+	</div>
+	<div class="rightIcon iconNavigation">
+		<img src="./images/icons/rightIcon.svg" alt="">
+	</div>
+	<div id="seanson_div" class="col-3 left-menu" style="display: none;">
+
+
+		<p id="searchcontent">
+			<i class="fa fa-search"></i><span>Search</span>
+		</p>
+		<p id="homepage">
+			<i class="fa fa-home"></i><span>Home</span>
+		</p>
+		<!-- <p id="kidddy">
+			<i style="margin-left: 5px;" class="fa fa-child"></i><span style="margin-left: 10px;">Spanish</span>
+		</p> -->
+		<p id="categorylisting">
+			<i style="margin-left: 3px;" class="fa fa-list-alt"></i><span style="font-size: 38px;">Categories</span>
+		</p>
+		<!-- <p id="channels">
+			<i class="fa fa-tv"></i><span>Exit</span>
+		</p> -->
+		<p id="set">
+			<i class="fa fa-cog"></i><span>Settings</span>
+		</p>
+	</div>
+
+
+	<div class="image-container-category col-9 right-scroll temp-right">
+		<!--<img src="images/home-bg.jpg" />-->
+		<div class="after">
+			<!-- Banner section Start -->
+			<section class="banner-home">
+				<div class="overlay-banner"></div>
+				<div class="container-fluid  banner-text" id="contentdiv" style="display: none;">
+
+					<div class="row">
+						<div class="col-lg-5 col-md-6 col-sm-6">
+							<h1 class="heading" id="name"></h1>
+							<div class="title-bar" id="titlebar" style="display: none;"></div>
+							<div class="p-light mb-3 text-muted">
+								<span id="year"></span> <span id="one" style="display: none;">|</span>
+								<span id="gen"></span> <span id="two" style="display: none;">|</span>
+								<span id="time"></span>
+							</div>
+							<p class="" id="summary"></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Banner section End -->
+			<div class="loader-blue" id="spinner" style="display: none"></div>
+			<!-- featured content section Start -->
+			<div class="container-fluid home-top pb-3" style="display: none;">
+
+				<div class="row content-margin" id="content_row" style="float:left;"></div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!-- <div class="logout exit" id="notification">
+		<div class="row" id="exitParentId">
+			<div class="col-lg-12 text-center" style="margin-top: 71px;">
+				<p class="notify-desc logoutDesc">Are you sure want to exit the app?</p>
+			</div>
+			<div class="col-lg-12 text-center" id="exitBtn-container">
+				<button type="button" class="btn btn-lg cus-btn exitModalBtn" id="exit_noBtn" onclick="cancel()">No</button>
+				<button type="button" class="btn btn-lg cus-btn exitModalBtn" id="exit_yesBtn" onclick="exit()">Yes</button>
+			</div>
+		</div>
+	</div> -->
+	<div class="custom-msg" id="nocontent"></div>
+
+	
+</body>
+
+</html>

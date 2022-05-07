@@ -1,0 +1,259 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Bootstrap contributors">
+	<meta name="generator" content="Jekyll v3.8.5">
+
+
+	<title>Samsung TV</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/custom.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/default.css" />
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+	<link href="css/horizontal.css" rel="stylesheet" />
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/kids.js"></script>
+
+	<style>
+		.imgsec {
+			width: 150px;
+			height: 225px;
+			background-color: #EA2E0F;
+		}
+
+		div.scrollmenu {
+			background-color: transparent;
+			overflow-x: auto;
+			overflow-y: hidden;
+			white-space: nowrap;
+		}
+
+		div.scrollmenu a {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			position: relative;
+			font-size: 25px;
+			text-decoration: none;
+			top: 28px;
+			margin-right: 15px;
+		}
+
+		div.scrollmenu a:hover {
+			background-color: transparent;
+		}
+
+		body {
+			overflow-x: hidden;
+			overflow-y: hidden;
+			height: 100%;
+			background-size: cover;
+		}
+
+		.navbar-dark .navbar-nav .nav-link {
+			padding: 10px 21px;
+			border: 3px solid red;
+			border-radius: 5px;
+			color: #fff;
+			font-weight: 700;
+		}
+
+		.scrollmenu a {
+			transition: transform .2s;
+			/* Animation */
+		}
+
+		.scrollmenu a.activeted ,.activeted {
+			/* transform: scale(1.2); */
+			border: 3px solid rgb(0, 226, 87) !important;
+			z-index: 999;
+		}
+
+		.menu_sec ul li.activeted .nav-link {
+			border: 3px solid #0cb9f2;
+		}
+
+		.heading_sec {
+			position: relative;
+			/* bottom: -3em; */
+			font-size: 47px;
+			font-weight: 800;
+		}
+
+		.right-scroll {
+			top: 3%;
+		}
+
+		.left-menu {
+			background-color: #000000;
+			width: 100%;
+			height: 100vh;
+			padding-top: 93px;
+		}
+
+		.left-menu p {
+			font-size: 45px;
+			padding-left: 44px;
+		}
+
+		.left-menu p span {
+			padding-left: 21px;
+		}
+
+		.temp-right {
+			left: 0 !important;
+			background: #1b262b;
+		}
+
+		.left-menu p.activeted {
+			background: #8B0000;
+			color: white;
+		}
+
+		/* 4WayTech */
+		.home-top{
+			margin-top:47vh;
+			}
+
+		#sliderTV a {
+			z-index: 50000001 !important;
+		}
+		.scrollmenu{
+			overflow: unset !important;
+		}
+		.example {
+				padding: 12px 10px 15px 50px;
+				background: #eb5d18;
+				border-radius: 10px;
+				color: #fff;
+				font-weight: 700;
+				max-width: 200px;
+				}
+	</style>
+</head>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a class="navbar-brand" href="#"><img
+				src="images/main-logo.png" style="width:auto;height:50px;"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+
+
+		<div class="collapse navbar-collapse menu_sec" id="navbarSupportedContent">
+			<ul class="navbar-nav dropright ml-auto">
+				<li class="nav-item">
+					<div class="nav-link test" data-perma="mobiletv" id="mobiletv" index="0" style="display: none">
+					</div>
+				</li>
+				<li class="nav-item">
+					<div class="nav-link test" data-perma="Lifestyle" id="Lifestyle" index="1" style="display: none">
+					</div>
+				</li>
+				<li class="nav-item">
+					<div class="nav-link test" data-perma="Food" id="Food" index="2" style="display: none"></div>
+				</li>
+				<li class="nav-item">
+					<div class="nav-link test" data-perma="Travel" id="Travel" index="3" style="display: none"></div>
+				</li>
+				<li class="nav-item">
+					<div class="nav-link test" data-perma="Sports" id="Sports" index="4" style="display: none"></div>
+				</li>
+				<li class="nav-item">
+					<div class="nav-link test" data-perma="Kids" id="Kids" index="5" style="display: none"></div>
+				</li>
+				<li class="nav-item">
+					<div class="nav-link test" data-perma="Tech" id="Tech" index="6" style="display: none"></div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+
+<div class="image-container-category col-12 right-scroll temp-right">
+	<!--<img src="images/home-bg.jpg" />-->
+	<div class="after">
+		<!-- Banner section Start -->
+		<section class="banner-home">
+			<div class="overlay-banner"></div>
+			<div class="container-fluid banner-text" id="contentdiv" style="display: none;">
+				<div class="row">
+					<div class="col-lg-5 col-md-6 col-sm-6">
+						<h1 class="heading" id="name"></h1>
+						<div class="title-bar" id="titlebar"></div>
+						<div class="p-light mb-3 mt-4 text-muted">
+							<span id="year"></span> <span id="one" style="display: none;">|</span>
+							<span id="gen"></span> <span id="two" style="display: none;">|</span>
+							<span id="time"></span>
+						</div>
+						<p class="" id="summary"></p>
+						<!-- <button class="btn btn-success" id="button" >Read More</button> -->
+						<a class="example" style="background-color: #f55f48;" id="button"> Read More</a>
+						<!-- <button class="btn btn-success" id="nextbtn"> Move to next</button> -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Banner section End -->
+		<div class="loader-blue" id="spinner" style="display: none"></div>
+		<!-- featured content section Start -->
+
+		<div class="container-fluid home-top">
+			<div>
+				<h2 class="heading-small-caps heading_sec" id="categorytitle" style="display: none;"></h2>
+			</div>
+			<!-- <div class="row content-margin category-pading-topp scrollmenu" id="content_banner">
+      	
+      </div> -->
+
+
+			<div id="sliderTV" class="scrollmenu" style="margin-top: -7%;">
+				<!-- slidable items in carousel -->
+			</div>
+
+
+		</div>
+		<div id="nocontent" align="center" style="display:none;font-size: 51px;
+    text-align: center;">
+		</div>
+
+	</div>
+</div>
+<script>
+	// document.querySelector("#sliderTV").tr=10
+var translateX=0;
+document.querySelector(".home-top").addEventListener("wheel",function(e){
+console.log(document.getElementById("sliderTV").lastChild.getBoundingClientRect())
+
+	e.preventDefault();
+	console.log(e)
+	if (document.getElementById("sliderTV").lastChild.getBoundingClientRect().right>window.innerWidth) {
+		translateX +=e.deltaY
+			
+		}
+	else if(e.deltaY<0){
+		translateX +=e.deltaY
+
+	}
+	if (translateX>=0 ) {
+
+	document.querySelector("#sliderTV").style.transform ="translate(-"+translateX+"px,0)"
+		
+	}
+
+})
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>THEOplayer 2.X: Getting Started</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- THEOplayer library and css -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.myth.theoplayer.com/f53d2df4-8b1e-4a1b-8fdc-878a8f60bf75/THEOplayer.js"
+    ></script>
+  
+       <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script>
+  
+      
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.myth.theoplayer.com/f53d2df4-8b1e-4a1b-8fdc-878a8f60bf75/ui.css"
+    />
+    <style>
+      body {
+        margin: 0;
+      }
+      .fa-forward,
+      .fa-backward,
+      .fa-pause {
+        position: absolute;
+        color: #ffc50f;
+        font-size: 4rem;
+        opacity: 0;
+        z-index: 5;
+        top: 50%;
+        transform: translate(0, -50%);
+        animation: 0.5s ease-out;
+      }
+      .fa-forward {
+        right: 20%;
+      }
+      .fa-backward {
+        left: 20%;
+      }
+      .fa-pause {
+        font-size: 5rem;
+        left: 50%;
+        opacity: 0;
+      }
+      .theo-cast-button,
+      .theo-settings-control-button,
+      .vjs-mute-control {
+        display: none !important;
+      }
+      .captionIcon {
+        position: absolute;
+        bottom: 6%;
+        left: 1%;
+        z-index: 55;
+        padding: 0px 4.5px;
+      }
+      .captionIcon svg {
+        fill: #fff;
+        width: 30px;
+        height: 30px;
+      }
+      .active {
+        border: 4px solid rgb(255, 255, 255) !important;
+      }
+
+      /* Controls */
+      .vjs-control-bar {
+        display: none !important;
+      }
+
+      .progress-bar {
+        height: 10px;
+        width: 90%;
+        margin: auto;
+        position: absolute;
+        bottom: 8vh;
+        border-radius: 5px;
+        left: 5%;
+        background: grey;
+        overflow: hidden;
+      }
+
+      .progress {
+        height: 100%;
+        width: 0%;
+        background: #ffc50f;
+      }
+      .play-icon {
+        position: absolute;
+        bottom: 1vh;
+        z-index: 55;
+        left: 5vw;
+        padding: 0.4rem 1rem;
+        height: 20px;
+      }
+      .play-icon svg {
+        fill: #ffc50f;
+        min-width: 15px;
+      }
+      .play-btn {
+        display: none;
+      }
+      /* .active svg{
+        fill: transparent;
+        stroke: #ffc50f;
+        stroke-width: 1rem;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <i class="fas fa-forward"></i>
+    <i class="fas fa-backward"></i>
+    <i class="fas fa-pause"></i>
+
+    <div class="theoplayer-container video-js theoplayer-skin vjs-16-9"></div>
+    <div class="captionIcon">
+      <svg viewBox="0 0 576 512">
+        <path
+          d="M512 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h448c35.35 0 64-28.65 64-64V96C576 60.65 547.3 32 512 32zM168.6 289.9c18.69 18.72 49.19 18.72 67.87 0c9.375-9.375 24.56-9.375 33.94 0s9.375 24.56 0 33.94c-18.72 18.72-43.28 28.08-67.87 28.08s-49.16-9.359-67.87-28.08C116.5 305.8 106.5 281.6 106.5 256s9.1-49.75 28.12-67.88c37.44-37.44 98.31-37.44 135.7 0c9.375 9.375 9.375 24.56 0 33.94s-24.56 9.375-33.94 0c-18.69-18.72-49.19-18.72-67.87 0C159.5 231.1 154.5 243.2 154.5 256S159.5 280.9 168.6 289.9zM360.6 289.9c18.69 18.72 49.19 18.72 67.87 0c9.375-9.375 24.56-9.375 33.94 0s9.375 24.56 0 33.94c-18.72 18.72-43.28 28.08-67.87 28.08s-49.16-9.359-67.87-28.08C308.5 305.8 298.5 281.6 298.5 256s9.1-49.75 28.12-67.88c37.44-37.44 98.31-37.44 135.7 0c9.375 9.375 9.375 24.56 0 33.94s-24.56 9.375-33.94 0c-18.69-18.72-49.19-18.72-67.87 0C351.5 231.1 346.5 243.2 346.5 256S351.5 280.9 360.6 289.9z"
+        />
+      </svg>
+    </div>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <div class="play-icon">
+      <svg
+        class="play-btn"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 384 512"
+      >
+        <path
+          d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"
+        />
+      </svg>
+      <svg
+        class="pause-btn"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 320 512"
+      >
+        <path
+          d="M272 63.1l-32 0c-26.51 0-48 21.49-48 47.1v288c0 26.51 21.49 48 48 48L272 448c26.51 0 48-21.49 48-48v-288C320 85.49 298.5 63.1 272 63.1zM80 63.1l-32 0c-26.51 0-48 21.49-48 48v288C0 426.5 21.49 448 48 448l32 0c26.51 0 48-21.49 48-48v-288C128 85.49 106.5 63.1 80 63.1z"
+        />
+      </svg>
+    </div>
+    <script>
+      var url = new URL(window.location.href);
+      var videoUrl = url.search.split("&")[1];
+      var srt_url = url.search.split("&")[2];
+      // var videoUrl = url.searchParams.get("conunter")
+      // var srt_url = url.searchParams.get("srt_url")
+      // videoUrl = url.search.split("=")[1];
+      // console.log(videoUrl);
+
+      var element = document.querySelector(".theoplayer-container");
+
+      var player = new THEOplayer.Player(element, {
+        libraryLocation:
+          "https://cdn.myth.theoplayer.com/f53d2df4-8b1e-4a1b-8fdc-878a8f60bf75",
+        license:
+          "sZP7IYe6T6fkIQ3eCLfZ0Ok6ClBoFSak0o0-CDBZCmzc0uhZIu0i3SaLCKf6FOPlUY3zWokgbgjNIOf9fK0_IS4K3oX6FDXgISR-3Qfk3Ok6IDXKFS1KCKXe0lI1Il463OfVfK4_bQgZCYxNWoryIQXzImf90SCt3lR_3Lfi0u5i0Oi6Io4pIYP1UQgqWgjeCYxgflEc3laL0ufLTS0z0u0ZFOPeWok1dDrLYtA1Ioh6TgV6v6fVfKcqCoXVdQjLUOfVfGxEIDjiWQXrIYfpCoj-fgzVfKxqWDXNWG3ybojkbK3gflNWf6E6FOPVWo31WQ1qbta6FOPzdQ4qbQc1sD4ZFK3qWmPUFOPLIQ-LflNWfK1zWDikfgzVfG3gWKxydDkibK4LbogqW6f9UwPkIYz",
+        // Picture-in-picture initialisation
+      });
+      player.source = {
+        sources: [
+          {
+            src: videoUrl,
+          },
+        ],
+
+        textTracks: [
+          {
+            default: true, //optional
+            kind: "captions", //optional - find other values at https://support.theoplayer.com/hc/en-us/articles/214350425#TextTrackDescription
+            // label: 'English subs', //optional - this will appear in your UI
+            src: srt_url,
+            srclang: "en",
+          },
+        ],
+
+        // ,
+        //         ads:[
+        //             {
+        //               "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //               "timeOffset": "start"
+        //             },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "00:10:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "00:24:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "00:36:00"
+        //               }
+        //               ,
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "00:48:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "01:00:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "01:12:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "01:24:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "01:36:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "01:48:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "02:00:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "02:12:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "02:24:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "02:36:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "02:48:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "03:00:00"
+        //               },
+        //               {
+        //                 "sources": "https://adserver.gtvads.com/video/b/1be80f8557d640d542da89eb80e05b3b?appName=glewedtv&bundleId={bundleId}&storeUrl={storeUrl}&ifa={ifa}&width=1920&height=1080&cb={cb}",
+        //                 "timeOffset": "end"
+        //               }
+        //         ]
+      };
+
+      player.preload = "auto";
+      player.play();
+      function togglePlay() {
+        if (player.paused) {
+          player.play();
+          // document.querySelector(".fa-pause").style.opacity = 0;
+          document.querySelector(".play-btn").style.display = "none";
+          document.querySelector(".pause-btn").style.display = "block";
+          updateProgress();
+        } else {
+          player.pause();
+          clearInterval(interval);
+          // document.querySelector(".fa-pause").style.opacity = 1;
+          document.querySelector(".pause-btn").style.display = "none";
+          document.querySelector(".play-btn").style.display = "block";
+        }
+      }
+
+      function fastForward() {
+        player.currentTime += 30; //Adds 30 seconds
+      }
+      function fastbackward() {
+        player.currentTime += 30; //Adds 30 seconds
+      }
+      setTimeout(function () {
+        // var _Object$values$;
+        // if (((_Object$values$ = Object.values(window.player.textTracks)[0]) === null || _Object$values$ === void 0 ? void 0 : _Object$values$.mode) == "showing") {
+        //   document.querySelector(".captionIcon").style.opacity=1
+        // }
+        // else{
+        //   document.querySelector(".captionIcon").style.opacity=0.6
+        // }
+      }, 3000);
+      // if (Object.values(window.player.textTracks)[0]?.mode=="showing") {
+
+      // }
+
+      setTimeout(function () {
+        if (window.player.textTracks[0] != undefined) {
+          document.querySelector(".captionIcon").style.opacity = 1;
+        } else {
+          document.querySelector(".captionIcon").style.opacity = 0.6;
+        }
+      }, 0);
+      //  setTimeout(function(){
+      //   document.querySelector(".captionIcon").style.opacity=0
+
+      //  },1500)
+
+      document.addEventListener("keydown", function handler(e) {
+        // document.querySelector(".vjs-control-bar").style.opacity="1"
+        // document.querySelector(".captionIcon").style.opacity=1
+        // setTimeout(function(){
+        //   document.querySelector(".vjs-control-bar").style.opacity=0
+        // document.querySelector(".captionIcon").style.opacity=0
+        // },1000)
+        clearTimeout(hideBar);
+        displayProgressBar();
+        hideProgressbar();
+        if (e.keyCode == "13") {
+          if (document.querySelector(".captionIcon").classList[1] == "active") {
+            toggleCaptions();
+          } else {
+            togglePlay();
+          }
+        } else if (e.keyCode == "39") {
+          player.currentTime += 10; //Adds 10 seconds
+          // document.querySelector(".theoplayer-skin.vjs-has-started.vjs-user-inactive.vjs-playing:not(.theo-menu-opened) .vjs-control-bar").style.opacity='1 !important';
+          document.querySelector(".fa-forward").style.opacity = 1;
+          updateProgress();
+          setTimeout(function () {
+            document.querySelector(".fa-forward").style.opacity = 0;
+          }, 500);
+        } else if (e.keyCode == "37") {
+          player.currentTime -= 10; //minus 10 seconds
+          document.querySelector(".fa-backward").style.opacity = 1;
+          setTimeout(function () {
+            document.querySelector(".fa-backward").style.opacity = 0;
+          }, 500);
+          updateProgress();
+        } else if (e.keyCode == "38") {
+          document.querySelector(".captionIcon").classList.add("active");
+          document.querySelector(".play-icon").classList.remove("active");
+        } else if (e.keyCode == "40") {
+          document.querySelector(".play-icon").classList.add("active");
+          document.querySelector(".captionIcon").classList.remove("active");
+        } else if (e.keyCode == 19) {
+          player.pause();
+          // document.querySelector(".fa-pause").style.opacity = 1;
+          document.querySelector(".pause-btn").style.display = "none";
+          document.querySelector(".play-btn").style.display = "block";
+        } else if (e.keyCode == 415) {
+          player.play();
+          document.querySelector(".pause-btn").style.display = "block";
+          document.querySelector(".play-btn").style.display = "none";
+          // document.querySelector(".fa-pause").style.opacity = 0;
+        } else if (e.keyCode == 417) {
+          player.currentTime += 10; //Adds 10 seconds
+          // document.querySelector(".theoplayer-skin.vjs-has-started.vjs-user-inactive.vjs-playing:not(.theo-menu-opened) .vjs-control-bar").style.opacity='1 !important';
+          document.querySelector(".fa-forward").style.opacity = 1;
+          setTimeout(function () {
+            document.querySelector(".fa-forward").style.opacity = 0;
+          }, 500);
+        } else if (e.keyCode == 412) {
+          player.currentTime -= 10; //minus 10 seconds
+          document.querySelector(".fa-backward").style.opacity = 1;
+          setTimeout(function () {
+            document.querySelector(".fa-backward").style.opacity = 0;
+          }, 500);
+        } else if (e.keyCode == 461) {
+          window.history.back();
+        } else if (e.keyCode == 8) {
+          window.history.back();
+        }
+      });
+      // OPTIONAL CONFIGURATION
+
+      document
+        .querySelector(".captionIcon")
+        .addEventListener("click", function () {
+          toggleCaptions();
+        });
+      document
+        .querySelector(".play-icon")
+        .addEventListener("click", function () {
+          togglePlay();
+        });
+        document.addEventListener("click",function(){
+          if (player.paused) {
+
+          document.querySelector(".play-btn").style.display = "block";
+          document.querySelector(".pause-btn").style.display = "none";
+          }
+          else{
+            document.querySelector(".play-btn").style.display = "none";
+          document.querySelector(".pause-btn").style.display = "block";
+
+          }
+
+
+        })
+
+      // Customized video player parameters
+      var bar = document.querySelector(".progress-bar");
+      var progress = document.querySelector(".progress");
+      var captionIcon = document.querySelector(".captionIcon");
+      var playIcon = document.querySelector(".play-icon");
+      var interval;
+      var hideBar;
+      // display progress bar when mouse moves
+      document.addEventListener("mousemove", function () {
+        clearTimeout(hideBar);
+        displayProgressBar();
+        hideProgressbar();
+      });
+
+      function updateProgress() {
+        interval = setInterval(function () {
+          var currentProgress =
+            (document.getElementsByTagName("video")[0].currentTime /
+              document.getElementsByTagName("video")[0].duration) *
+            100;
+          progress.style.width = currentProgress + "%";
+        }, 500);
+      }
+      function displayProgressBar() {
+        bar.style.display = "block";
+        captionIcon.style.display = "block";
+        playIcon.style.display = "block";
+      }
+      function hideProgressbar() {
+        hideBar = setTimeout(function () {
+          bar.style.display = "none";
+          captionIcon.style.display = "none";
+          playIcon.style.display = "none";
+        }, 5000);
+      }
+
+      // Toggle Captions
+      function toggleCaptions() {
+        if (srt_url.length > 0) {
+          if (srt_url && window.player.textTracks[0].mode == "hidden") {
+            window.player.textTracks[0].mode = "showing";
+            document.querySelector(".captionIcon").style.opacity = 1;
+          } else if (window.player.textTracks[0].mode == "showing") {
+            window.player.textTracks[0].mode = "hidden";
+            document.querySelector(".captionIcon").style.opacity = 0.6;
+          }
+        }
+      }
+
+      updateProgress();
+      hideProgressbar();
+    </script>
+  </body>
+</html>
